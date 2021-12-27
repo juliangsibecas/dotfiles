@@ -1,0 +1,13 @@
+require("my.plugins")
+require("my.options")
+require("my.mappings")
+
+require("my.lspconfig")
+require("my.lspsaga")
+require("my.tmux")
+require("my.onedark")
+require("my.lualine")
+require("my.treesitter")
+require("my.cmp")
+require("my.formatter")
+require("my.autopairs")
