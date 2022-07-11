@@ -13,11 +13,11 @@ M.map("n", "<esc>", ":noh<cr>")
 
 M.map("n", "gd", "<cmd> lua vim.lsp.buf.definition()<cr>")
 M.map("n", "gr", "<cmd> lua vim.lsp.buf.references()<cr>")
-M.map("n", "K", "<cmd> lua vim.lsp.buf.hover()<cr>")
-M.map("n", "[[", "<cmd> lua vim.lsp.diagnostic.goto_prev()<cr>")
-M.map("n", "]]", "<cmd> lua vim.lsp.diagnostic.goto_next()<cr>")
 
-M.map("n", "<leader>rn", "<cmd> lua vim.lsp.buf.rename()<cr>")
+M.map("n", "K", ":Lspsaga hover_doc<cr>")
+M.map("n", "[[", ":Lspsaga diagnostic_jump_next<cr>")
+M.map("n", "]]", ":Lspsaga diagnostic_jump_prev<cr>")
+M.map("n", "<leader>rn", ":Lspsaga rename<cr>")
 M.map("n", "<leader>cf", ":Lspsaga code_action<cr>")
 
 M.map("n", "<leader>w<space>", "<cmd>:w<cr>")

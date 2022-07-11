@@ -1,17 +1,15 @@
 alt - e : yabai -m space --layout bsp
 alt - s : yabai -m space --layout stack
 
-alt - r : yabai -m space --rotate 90
-
 alt - f : yabai -m window --toggle zoom-fullscreen
 
-alt - h : yabai -m window --swap west
-alt - j : yabai -m window --swap south
-alt - k : yabai -m window --swap north
-alt - l : yabai -m window --swap east 
+alt + shift - h : yabai -m window --swap west
+alt + shift - j : yabai -m window --swap south
+alt + shift - k : yabai -m window --swap north
+alt + shift - l : yabai -m window --swap east 
 
-alt + shift - h : yabai -m window --focus prev
-alt + shift - l : yabai -m window --focus next
+alt - h : yabai -m window --focus prev
+alt - l : yabai -m window --focus next
 
 alt - 1 : yabai -m space --focus 1
 alt - 2 : yabai -m space --focus 2
@@ -21,9 +19,8 @@ alt - 5 : yabai -m space --focus 5
 alt - 6 : yabai -m space --focus 6
 
 alt + shift - 1 : yabai -m window --space 1
-alt + shift - 2 : yabai m window --space 2
+alt + shift - 2 : yabai -m window --space 2
 alt + shift - 3 : yabai -m window --space 3
 alt + shift - 4 : yabai -m window --space 4
 alt + shift - 5 : yabai -m window --space 5
 alt + shift - 6 : yabai -m window --space 6
--

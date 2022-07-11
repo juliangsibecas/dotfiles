@@ -1,5 +1,4 @@
 vim.g.mapleader = " "
-vim.g.onedark_style = "deep"
 vim.g.UltiSnipsRemoveSelectModeMappings = 0
 vim.g.kommentary_create_default_mappings = 1
 
