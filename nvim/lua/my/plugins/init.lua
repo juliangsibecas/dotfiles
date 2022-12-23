@@ -31,6 +31,10 @@ return require("packer").startup(function(use)
     "nvim-telescope/telescope.nvim",
     requires = "nvim-lua/plenary.nvim",
   })
+  use({
+    "ThePrimeagen/harpoon",
+    requires = "nvim-lua/plenary.nvim",
+  })
 
   -- Writing
   use({

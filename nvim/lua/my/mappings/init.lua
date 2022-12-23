@@ -35,4 +35,9 @@ M.map("n", "<leader>cc", "<Plug>kommentary_line_default", { noremap = false })
 M.map("n", "<leader>c", "<Plug>kommentary_motion_default", { noremap = false })
 M.map("x", "<leader>c", "<Plug>kommentary_visual_default", { noremap = false })
 
+M.map("n", "<leader>ht", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>")
+M.map("n", "<leader>hm", "<cmd>lua require('harpoon.mark').add_file()<cr>")
+M.map("n", "<leader>hh", "<cmd>lua require('harpoon.ui').nav_prev()<cr>")
+M.map("n", "<leader>hl", "<cmd>lua require('harpoon.ui').nav_next()<cr>")
+
 return M

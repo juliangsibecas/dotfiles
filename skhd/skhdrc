@@ -1,6 +1,5 @@
-alt - e : yabai -m space --layout bsp
+alt - b : yabai -m space --layout bsp
 alt - s : yabai -m space --layout stack
-
 alt - f : yabai -m window --toggle zoom-fullscreen
 
 alt + shift - h : yabai -m window --swap west

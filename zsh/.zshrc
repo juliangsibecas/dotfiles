@@ -2,7 +2,7 @@
 export PATH=/opt/homebrew/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/juliansibecas/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -74,6 +74,7 @@ plugins=(
   git
   zsh-syntax-highlighting
   zsh-autosuggestions
+  vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -108,8 +109,9 @@ source $ZSH/oh-my-zsh.sh
 
 alias vim="nvim"
 
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 autoload -U add-zsh-hook
 load-nvmrc() {
@@ -132,4 +134,10 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
-export ANDROID_HOME=/Users/juliansibecas/Library/Android/sdk
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH="$ANDROID_HOME/platform-tools":$PATH
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
+
+VI_MODE_SET_CURSOR=true
+export PATH=/Applications/Barrier.app/Contents/MacOS/:$PATH
