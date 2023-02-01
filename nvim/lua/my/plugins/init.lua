@@ -52,4 +52,7 @@ return require("packer").startup(function(use)
   })
   use("mhartington/formatter.nvim")
   use("b3nj5m1n/kommentary")
+
+  -- Git
+  use("f-person/git-blame.nvim")
 end)

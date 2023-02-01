@@ -140,4 +140,10 @@ export PATH="$ANDROID_HOME/platform-tools":$PATH
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
 
 VI_MODE_SET_CURSOR=true
+
+if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
+  export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+  export PATH=`gem environment gemdir`/bin:$PATH
+fi
+
 export PATH=/Applications/Barrier.app/Contents/MacOS/:$PATH

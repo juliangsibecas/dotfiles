@@ -12,3 +12,5 @@ vim.o.relativenumber = true
 
 vim.wo.number = true
 vim.wo.numberwidth = 1
+
+vim.g.gitblame_enabled = 0
