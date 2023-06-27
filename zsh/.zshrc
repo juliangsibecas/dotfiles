@@ -134,10 +134,11 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH="$ANDROID_HOME/platform-tools":$PATH
+source $HOME/.rvm/scripts/rvm
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export PATH="$ANDROID_HOME/platform-tools":$PATH
 
 VI_MODE_SET_CURSOR=true
 
@@ -147,3 +148,8 @@ if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
 fi
 
 export PATH=/Applications/Barrier.app/Contents/MacOS/:$PATH
+export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
+export PATH="$(yarn global bin):$PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
