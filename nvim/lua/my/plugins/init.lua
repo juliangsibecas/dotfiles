@@ -1,6 +1,14 @@
 return require("packer").startup(function(use)
-  use("neovim/nvim-lspconfig")
-  use("tami5/lspsaga.nvim")
+  use({
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  })
+  use({
+    "creativenull/efmls-configs-nvim",
+    requires = "neovim/nvim-lspconfig",
+  })
+  use("nvimdev/lspsaga.nvim")
   use("nvim-treesitter/nvim-treesitter")
 
   use("navarasu/onedark.nvim")
@@ -48,7 +56,7 @@ return require("packer").startup(function(use)
     "SirVer/ultisnips",
     requires = "honza/vim-snippets",
   })
-  use("mhartington/formatter.nvim")
+  use("lukas-reineke/lsp-format.nvim")
   use("b3nj5m1n/kommentary")
 
   -- Git

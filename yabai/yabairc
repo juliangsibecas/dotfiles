@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
 
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
 # float system preferences. Most of these just diable Yabai form resizing them.
 yabai -m rule --add app="^System Preferences$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Finder$" sticky=on layer=above manage=off
@@ -32,8 +35,6 @@ yabai -m config left_padding 50
 yabai -m config right_padding 50
 yabai -m config window_gap 10
 
-sudo /opt/homebrew/bin/yabai --load-sa
-yabai -m signal --add event=dock_did_restart action="sudo /opt/homebrew/bin/yabai --load-sa"
 
 echo "yabai configuration loaded.."
 
